@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Fatidd::Application.config.secret_key_base = '224498b76287d9abbcaae994c6f078d1c744f4b5ab91b1e743cadbc3ed4341a3ab4849c8b6ac54759c482231c63cf7f8aadf09b1d45f1f040a12f79e432fe045'
+Fatidd::Application.config.secret_key_base = '<valid_key>'

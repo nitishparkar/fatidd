@@ -4,8 +4,8 @@ development:
   pool: 5
   timeout: 5000
   host: localhost
-  username: root
-  password: Qwerty123!
+  username: nitish
+  password:
 
 production:
   adapter: mysql2
@@ -13,5 +13,5 @@ production:
   pool: 5
   timeout: 5000
   host: localhost
-  username: root
-  password: Qwerty123!
+  username: nitish
+  password:
