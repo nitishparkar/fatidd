@@ -11,7 +11,10 @@ gem 'devise'
 gem 'acts_as_commentable'
 gem 'acts-as-taggable-on'
 gem 'haml'
+gem 'friendly_id', git: 'https://github.com/norman/friendly_id.git', branch: '5.0-stable'
 
 group :development do
   gem 'debugger'
+  gem 'annotate', '>=2.5.0'
+  gem 'letter_opener'
 end
