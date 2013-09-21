@@ -1,0 +1,10 @@
+.row
+  .col-lg-4
+
+  .col-lg-8
+    %h2= @date.strftime("%d %B %Y")
+
+    - @task_groups.each do |user, tasks|
+      %h3= "#{user.username}'s tasks"
+      - tasks.each do |task|
+        %p= task.content
