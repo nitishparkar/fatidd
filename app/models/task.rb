@@ -19,6 +19,15 @@ class Task < ActiveRecord::Base
 
   before_save :parse_tags
 
+  def self.add_parsed_tasks(tasks, email, task_date)
+    user = User.where(email: email).first
+    if user && email && task_date
+      tasks.each do |task|
+        user.tasks.create!(task_date: task_date, content: task)
+      end
+    end
+  end
+
   private
     def parse_tags
       self.tag_list = content.scan /^#\w+/

@@ -5,7 +5,10 @@ class HomeController < ApplicationController
     if request.headers["Authorization"] != API_KEY
       return head(:unauthorized)
     end
-    UserMailer.receive(params[:email][:raw])
+
+    tasks, email, task_date = UserMailer.receive(params[:email][:raw])
+    Task.add_parsed_tasks(tasks, email, task_date)
+
     head :ok
   end
 
